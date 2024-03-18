@@ -1,0 +1,36 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    },
+		{
+      "name": "sad",
+      "amout": 2,
+      "describe": "ádsad",
+      "type": "Giày",
+      "img": "assets/image-item/sanphamtuisach2.jpg",
+      "id": "HoMztw_"
+    },
+    {
+      "name": "tui",
+      "amout": 2,
+      "describe": "adsad",
+      "type": "Deo Vai",
+      "img": "assets/image-item/sanphamtuisach2.jpg",
+      "id": "jMe36zd"
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+	
+}

@@ -1,0 +1,49 @@
+<div class="popup-user" id="popup-user">
+  <div class="model-user">
+    <a href="/detail">X</a>
+    <form class="userform" [formGroup]="userForm" (submit)="onSubmit()">
+      <p>*Họ Và Tên*</p>
+      <input type="text" placeholder="" required formControlName="name" />
+      <p>Email</p>
+      <input type="text" formControlName="email" />
+      <p>*Số Điện Thoại*</p>
+      <input
+        type="number"
+        name=""
+        id=""
+        placeholder=""
+        required
+        formControlName="phone"
+      />
+      <p>*Số Lượng Sản Phẩm*</p>
+      <input
+        type="number"
+        name=""
+        id=""
+        placeholder=""
+        formControlName="amout"
+        style="width: 10%"
+      />
+      <p>*Địa Chỉ*</p>
+      <textarea
+        name=""
+        id=""
+        cols="30"
+        rows="5"
+        placeholder=""
+        style="resize: none"
+        required=""
+        formControlName="address"
+      ></textarea
+      ><br />
+
+      <button
+        routerLink="/detail"
+        class="button-model-user"
+        (click)="onSubmit()"
+      >
+        Buy
+      </button>
+    </form>
+  </div>
+</div>

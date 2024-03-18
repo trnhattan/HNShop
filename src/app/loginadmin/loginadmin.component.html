@@ -1,0 +1,25 @@
+<div class="container-loginad">
+  <div class="login">
+    <form class="formlogin" [formGroup]="loginadmin">
+      <h1>Đăng Nhập</h1>
+      <input
+        class="inputemail"
+        type="text"
+        required="sad"
+        placeholder="Ente-Email"
+        formControlName="Email"
+      />
+      <input
+        type="password"
+        required=""
+        placeholder="Enter-Password"
+        formControlName="password"
+      />
+      <div class="button">
+        <button class="btn-login" (click)="OnSubmit(loginadmin.value)">
+          Login
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

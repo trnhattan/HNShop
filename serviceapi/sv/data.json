@@ -1,0 +1,26 @@
+{
+  "admin": [
+    {
+      "Email": "admin2",
+      "password": "123",
+      "id": "b74c"
+    }
+  ],
+  "image": [
+    {
+      "id": "1",
+      "img": "C:"
+    }
+  ],
+  "product": [
+    {
+      "id": "bed6",
+      "name": "sdasd",
+      "amout": null,
+      "describe": null,
+      "type": null,
+      "img": null,
+      "money": null
+    }
+  ]
+}

@@ -1,0 +1,161 @@
+<div class="container-admin" id="container-admin">
+  <div class="container-popup">
+    <div class="popup-add" id="popup-add">
+      <div class="model-add">
+        <a href="/admin">X</a>
+        <form class="addform" [formGroup]="addform" (submit)="onSubmit()">
+          <p>*Tên Sản Phẩm*</p>
+          <input type="text" placeholder="" required formControlName="name" />
+          <p>*Số Lượng*</p>
+          <input
+            type="number"
+            name=""
+            id=""
+            placeholder=""
+            formControlName="amout"
+          />
+          <p>*Giá Tiền*</p>
+          <input
+            type="number"
+            name=""
+            id=""
+            placeholder=""
+            required
+            formControlName="money"
+          />
+          <p>Hình Ảnh</p>
+          <input type="text" formControlName="img" />
+          <p>*Mô Tả*</p>
+          <textarea
+            name=""
+            id=""
+            cols="30"
+            rows="5"
+            placeholder=""
+            style="resize: none"
+            required="điền vào đây"
+            formControlName="describe"
+          ></textarea>
+          <p>*Loại Sản Phẩm*</p>
+          <select name="" id="" required formControlName="type">
+            <option value="Deo Vai">Đeo Vai</option>
+            <option value="Giày">Giày</option>
+          </select>
+          <button class="button-model-add">Thêm Sản Phẩm</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="container-form" id="container-form">
+    <!-- <div class="container-popup">
+      <div class="popup-add" id="popup-add">
+        <div class="model-add">
+          <a href="/admin/#container-admin">X</a>
+          <form class="addform" [formGroup]="addform" (submit)="onSubmit()">
+            <p>*Tên Sản Phẩm*</p>
+            <input type="text" placeholder="" required formControlName="name" />
+            <p>*Số Lượng*</p>
+            <input
+              type="number"
+              name=""
+              id=""
+              placeholder=""
+              formControlName="amout"
+            />
+            <p>*Giá Tiền*</p>
+            <input
+              type="number"
+              name=""
+              id=""
+              placeholder=""
+              required
+              formControlName="money"
+            />
+            <p>Hình Ảnh</p>
+            <input type="file" formControlName="img" />
+            <p>*Mô Tả*</p>
+            <textarea
+              name=""
+              id=""
+              cols="30"
+              rows="5"
+              placeholder=""
+              style="resize: none"
+              required="điền vào đây"
+              formControlName="describe"
+            ></textarea>
+            <p>*Loại Sản Phẩm*</p>
+            <select name="" id="" required formControlName="type">
+              <option value="Deo Vai">Đeo Vai</option>
+              <option value="Giày">Giày</option>
+            </select>
+            <button class="button-model-add">Thêm Sản Phẩm</button>
+          </form>
+        </div>
+      </div>
+    </div> -->
+    <div class="seach-model">
+      <input type="text" placeholder="Tìm Kiếm" />
+    </div>
+
+    <div class="container-item-list">
+      <div class="button-model">
+        <a href="/admin/#popup-add">+</a>
+      </div>
+      <table class="table-item">
+        <thead>
+          <tr>
+            <th>STT</th>
+            <th>Hình Ảnh</th>
+            <th>Tên Sản Phẩm</th>
+            <th>Số Lượng</th>
+            <th>Mô Tả</th>
+            <th>Loại</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let product of products; let i = index">
+            <td>{{ i + 1 }}</td>
+
+            <td>
+              <img [src]="product.img" style="width: 80px; height: 80px" />
+            </td>
+            <!-- src="{{ product.img }} " -->
+            <td>{{ product.name }}</td>
+            <td>{{ product.amout }}</td>
+            <td>{{ product.describe }}</td>
+            <td>{{ product.type }}</td>
+            <td>
+              <a
+                style="
+                  display: block;
+                  width: 37%;
+                  height: 35px;
+                  border-radius: 5px;
+                  border: 2px solid black;
+                  left: 15%;
+                  font-size: 15px;
+                  align-items: center;
+                  display: flex;
+                  justify-content: center;
+                  background-color: black;
+                  color: white;
+                  float: left;
+                  text-decoration: none;
+                "
+                routerLink="/edit/{{ product.id }}"
+                class="button-model-update"
+                >Edit</a
+              >
+
+              <button class="button-model-del" (click)="Ondelete(product.id)">
+                Del
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,78 @@
+<div class="header">
+  <header>
+    <div class="header-navbar">
+      <a href="index.html">HNShop</a>
+      <nav class="header-nav">
+        <ul class="header-list">
+          <li class="header-list--item">
+            <a routerLink="/fullpage">Trang Chủ</a>
+          </li>
+          <li class="header-list--item">
+            <a routerLink="/detail">Thời Trang Nữ</a>
+          </li>
+          <li class="header-list--item">
+            <a routerLink="/detail">Thời Trang Nam</a>
+          </li>
+          <li class="header-list--item">
+            <a routerLink="/fullpage/#contact">Liên Hệ </a>
+          </li>
+          <li class="header-list--item">
+            <a routerLink="/fullpage/#contact">Kết Nối </a>
+          </li>
+        </ul>
+      </nav>
+      <div class="seach">
+        <input id="seach-input" type="text" />
+        <a href=""
+          ><img src="./assets/image/Screenshot 2022-05-21 001617.png" alt=""
+        /></a>
+        <!-- <a href="https://www.facebook.com/profile.php?id=100013145042189"
+					><img src="./assets/image/iconfb.jpg" alt=""
+				/></a>
+				<a href="https://www.facebook.com/profile.php?id=100013145042189"
+					><img src="./assets/image/iconmayanh.jpg" alt=""
+				/></a>
+				<a href="https://www.facebook.com/profile.php?id=100013145042189"
+					><img src="./assets/image/iconyoutube.jpg" alt=""
+				/></a>
+				<a href="https://www.facebook.com/profile.php?id=100013145042189"
+					><img src="./assets/image/iconzalo.jpg" alt=""
+				/></a> -->
+      </div>
+    </div>
+  </header>
+</div>
+<div class="infor-iteam-popup">
+  <div class="popup" id="popup">
+    <div class="popup-infor">
+      <h1>Thông Tin Chi Tiết Sản Phẩm</h1>
+      <div class="close">
+        <a href="/detail#item-image">X</a>
+      </div>
+      <div class="img-item"><img src="{{ productid.img }}" alt="" /></div>
+      <div class="infor-item">
+        <table>
+          <tr>
+            <th>Tên Sản phẩm:</th>
+            <td>{{ productid.name }}</td>
+          </tr>
+          <tr>
+            <th>Giá Sản Phẩm:</th>
+            <td>{{ productid.money }}VND</td>
+          </tr>
+          <tr>
+            <th>Loại Sản Phẩm:</th>
+            <td>{{ productid.type }}</td>
+          </tr>
+          <tr>
+            <th>Mô Tả Sản Phẩm:</th>
+            <td>{{ productid.describe }}</td>
+          </tr>
+        </table>
+        <div class="infor-contact">
+          <img src="assets/image/ảnh chi tiết.png" alt="" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,50 @@
+<div class="popup-update" id="popup-update">
+  <div class="model-update">
+    <a href="/admin/#container-admin">X</a>
+    <form class="addform" [formGroup]="updateform" (ngSubmit)="onUpdate()">
+      <p>*Tên Sản Phẩm*</p>
+      <input type="text" formControlName="name" placeholder="" />
+      <p>*Số Lượng*</p>
+      <input
+        type="number"
+        name=""
+        id=""
+        placeholder=""
+        required
+        formControlName="amout"
+      />
+      <p>*Giá Tiền*</p>
+      <input
+        type="number"
+        name=""
+        id=""
+        placeholder=""
+        required
+        formControlName="money"
+      />
+      <!-- <p>Hình Ảnh</p>
+      <input type="text" formControlName="img" /> -->
+      <p>*Mô Tả*</p>
+      <textarea
+        name=""
+        id=""
+        cols="30"
+        rows="5"
+        placeholder=""
+        style="resize: none"
+        required="điền vào đây"
+        formControlName="describe"
+      ></textarea>
+      <p>*Loại Sản Phẩm*</p>
+      <select name="" id="" required formControlName="type">
+        <!-- <option>Chon Loai San pham</option> -->
+        <option value="Deo Vai">Đeo Vai</option>
+        <option value="Giày">Giày</option>
+      </select>
+      <button routerLink="/admin" class="buttonupdate" (ngSubmit)="onUpdate()">
+        Cập Nhật
+      </button>
+    </form>
+  </div>
+</div>
+<!-- endmodel -->
